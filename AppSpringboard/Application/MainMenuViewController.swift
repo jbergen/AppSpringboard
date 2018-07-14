@@ -8,6 +8,15 @@
 
 import UIKit
 
+/**
+
+ This file contains the guts for the display of and naigation between different topics
+
+ If you're just starting out in iOS development, you may want to start elsewhere, the
+ concepts are somewhat abstracted out in order to simplify the process of adding topics.
+
+ **/
+
 private enum Topic {
     case tableViewController
 
