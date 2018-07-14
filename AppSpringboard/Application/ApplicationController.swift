@@ -32,7 +32,7 @@ class ApplicationController {
      once `init` completes.
     **/
     init() {
-        let vc = ViewController()
+        let vc = MainMenuViewController()
         navigationController = UINavigationController(rootViewController: vc)
     }
 }
