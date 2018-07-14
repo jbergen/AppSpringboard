@@ -104,20 +104,18 @@ class MainMenuViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: genericCellReusableId, for: indexPath)
-        let sectionType = topics[indexPath.section]
+        let rowType = topics[indexPath.section].row(indexPath.row)
 
-        cell.accessoryType = .disclosureIndicator
-
-        let rowType = sectionType.row(indexPath.row)
         cell.textLabel?.text = rowType?.title
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let title = topics[section].title else { return nil }
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 20))
-        let label = UILabel(frame: CGRect(x: 20, y: 0, width: tableView.bounds.width - 60, height: 20))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 50))
+        let label = UILabel(frame: CGRect(x: 15, y: view.bounds.height - 24, width: tableView.bounds.width - 60, height: 20))
         label.text = title
         label.textColor = .darkGray
         label.font = UIFont.boldSystemFont(ofSize: 16)
@@ -126,6 +124,6 @@ class MainMenuViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return topics[section].title == nil ? 0 : 20
+        return topics[section].title == nil ? 0 : 50
     }
 }
