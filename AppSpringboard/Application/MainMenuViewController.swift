@@ -53,8 +53,10 @@ protocol SectionRowProtocol {
 private enum TableViewControllerRow: Int, SectionRowProtocol {
     case plain
     case grouped
+    case plainWithSections
+    case groupedWithSections
 
-    static var count: Int = 2
+    static var count: Int = 4
 
     var title: String {
         switch self {
@@ -62,6 +64,10 @@ private enum TableViewControllerRow: Int, SectionRowProtocol {
             return "Plain"
         case .grouped:
             return "Grouped"
+        case .plainWithSections:
+            return "Plain with sections"
+        case .groupedWithSections:
+            return "Grouped with sections"
         }
     }
 
@@ -71,6 +77,10 @@ private enum TableViewControllerRow: Int, SectionRowProtocol {
             return PlainTableViewController()
         case .grouped:
             return GroupedTableViewController()
+        case .plainWithSections:
+            return PlainWithSectionsViewController()
+        case .groupedWithSections:
+            return GroupedWithSectionsViewController()
         }
     }
 

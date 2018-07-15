@@ -13,6 +13,8 @@
 		5B25455920FA4CAC00E5B42B /* animals.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B25455820FA4CAC00E5B42B /* animals.txt */; };
 		5B25455B20FA4FFA00E5B42B /* GroupedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25455A20FA4FFA00E5B42B /* GroupedTableViewController.swift */; };
 		5B25455D20FA519900E5B42B /* adjectives.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B25455C20FA519900E5B42B /* adjectives.txt */; };
+		5B25455F20FAF58900E5B42B /* PlainWithSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25455E20FAF58900E5B42B /* PlainWithSectionsViewController.swift */; };
+		5B25456120FAF80E00E5B42B /* GroupedWithSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25456020FAF80E00E5B42B /* GroupedWithSectionsViewController.swift */; };
 		5B96065020F3F73D00160DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96064F20F3F73D00160DE4 /* AppDelegate.swift */; };
 		5B96065720F3F74000160DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B96065620F3F74000160DE4 /* Assets.xcassets */; };
 		5B96065A20F3F74000160DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B96065820F3F74000160DE4 /* LaunchScreen.storyboard */; };
@@ -26,6 +28,8 @@
 		5B25455820FA4CAC00E5B42B /* animals.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = animals.txt; sourceTree = "<group>"; };
 		5B25455A20FA4FFA00E5B42B /* GroupedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedTableViewController.swift; sourceTree = "<group>"; };
 		5B25455C20FA519900E5B42B /* adjectives.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = adjectives.txt; sourceTree = "<group>"; };
+		5B25455E20FAF58900E5B42B /* PlainWithSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainWithSectionsViewController.swift; sourceTree = "<group>"; };
+		5B25456020FAF80E00E5B42B /* GroupedWithSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedWithSectionsViewController.swift; sourceTree = "<group>"; };
 		5B96064C20F3F73D00160DE4 /* AppSpringboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSpringboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B96064F20F3F73D00160DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B96065620F3F74000160DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 			children = (
 				5B25455320FA4A7D00E5B42B /* PlainTableViewController.swift */,
 				5B25455A20FA4FFA00E5B42B /* GroupedTableViewController.swift */,
+				5B25455E20FAF58900E5B42B /* PlainWithSectionsViewController.swift */,
+				5B25456020FAF80E00E5B42B /* GroupedWithSectionsViewController.swift */,
 			);
 			path = UITableViewController;
 			sourceTree = "<group>";
@@ -178,6 +184,8 @@
 				5B25455B20FA4FFA00E5B42B /* GroupedTableViewController.swift in Sources */,
 				5B25455720FA4C4900E5B42B /* DataStore.swift in Sources */,
 				5B25455420FA4A7D00E5B42B /* PlainTableViewController.swift in Sources */,
+				5B25456120FAF80E00E5B42B /* GroupedWithSectionsViewController.swift in Sources */,
+				5B25455F20FAF58900E5B42B /* PlainWithSectionsViewController.swift in Sources */,
 				5B96066320F3F7AF00160DE4 /* ApplicationController.swift in Sources */,
 				5B25455120F95EFB00E5B42B /* MainMenuViewController.swift in Sources */,
 				5B96065020F3F73D00160DE4 /* AppDelegate.swift in Sources */,
