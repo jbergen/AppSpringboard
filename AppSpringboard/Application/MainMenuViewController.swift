@@ -56,8 +56,9 @@ private enum TableViewControllerRow: Int, SectionRowProtocol {
     case plainWithSections
     case groupedWithSections
     case refreshable
+    case customCell
 
-    static var count: Int = 5
+    static var count: Int = 6
 
     var title: String {
         switch self {
@@ -71,6 +72,8 @@ private enum TableViewControllerRow: Int, SectionRowProtocol {
             return "Grouped with sections"
         case .refreshable:
             return "Refreshable"
+        case .customCell:
+            return "Custom Cell"
         }
     }
 
@@ -86,6 +89,8 @@ private enum TableViewControllerRow: Int, SectionRowProtocol {
             return GroupedWithSectionsViewController()
         case .refreshable:
             return RefreshableTableViewController()
+        case .customCell:
+            return CustomCellTableViewController()
         }
     }
 

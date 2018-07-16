@@ -13,10 +13,20 @@ class DataStore {
 
     var adjectives = [String]()
     var animals = [String]()
+    var colors = [Color]()
 
     init() {
         adjectives = getTextContents(filename: "adjectives")
         animals = getTextContents(filename: "animals")
+        colors = {
+            guard let colorDict = getJSON(filename: "colors") else { return [] }
+            guard let arr = colorDict["colors"] as? [Dictionary<String, AnyObject>] else { return [] }
+            return arr.compactMap { entry in
+                guard let name = entry["name"] as? String else { return nil }
+                guard let hex = entry["hex"] as? String else { return nil }
+                return Color(name: name, hex: hex)
+            }
+        }()
     }
 
     func dataArray(count: Int) -> [String] {
@@ -31,9 +41,16 @@ class DataStore {
     }
 
     private func getTextContents(filename: String) -> [String] {
-        guard let filepath = Bundle.main.path(forResource: filename, ofType: "txt") else { return [] }
-        guard let contents = try? String(contentsOfFile: filepath) else { return [] }
+        guard let path = Bundle.main.path(forResource: filename, ofType: "txt") else { return [] }
+        guard let contents = try? String(contentsOfFile: path) else { return [] }
         return contents.components(separatedBy: .newlines)
+    }
+
+    private func getJSON(filename: String) -> Dictionary<String, AnyObject>? {
+        guard let path = Bundle.main.path(forResource: filename, ofType: "json") else { return nil }
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe) else { return nil }
+        guard let jsonResult = try? JSONSerialization.jsonObject(with: data, options: .mutableLeaves) else { return nil }
+        return jsonResult as? Dictionary<String, AnyObject>
     }
 }
 
