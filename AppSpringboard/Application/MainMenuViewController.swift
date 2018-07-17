@@ -19,11 +19,14 @@ import UIKit
 
 private enum Topic {
     case tableViewController
+    case device
 
     var title: String? {
         switch self {
         case .tableViewController:
             return "UITableViewController"
+        case .device:
+            return "Device"
         }
     }
 
@@ -39,6 +42,8 @@ private enum Topic {
         switch self {
         case .tableViewController:
             return TableViewControllerRow.self
+        case .device:
+            return DeviceRow.self
         }
     }
 }
@@ -100,9 +105,34 @@ private enum TableViewControllerRow: Int, SectionRowProtocol {
     }
 }
 
+private enum DeviceRow: Int, SectionRowProtocol {
+    case camera
+
+    static var count: Int = 1
+
+    var title: String {
+        switch self {
+        case .camera:
+            return "Camera"
+        }
+    }
+
+    var viewController: UIViewController {
+        switch self {
+        case .camera:
+            return CameraViewController()
+        }
+    }
+
+    init?(value: Int) {
+        guard let row = DeviceRow(rawValue: value) else { return nil }
+        self = row
+    }
+}
+
 class MainMenuViewController: UITableViewController {
     private let genericCellReusableId = "reuse id";
-    private let topics: [Topic] = [.tableViewController]
+    private let topics: [Topic] = [.tableViewController, .device]
 
     convenience init() {
         self.init(style: .grouped)

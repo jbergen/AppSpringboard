@@ -19,6 +19,7 @@
 		5B65446820FD0F6D00D62669 /* CustomCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65446720FD0F6D00D62669 /* CustomCellTableViewController.swift */; };
 		5B65446A20FD115F00D62669 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B65446920FD115F00D62669 /* colors.json */; };
 		5B65446C20FD12E400D62669 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65446B20FD12E400D62669 /* Color.swift */; };
+		5B65446F20FD3C0200D62669 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B65446E20FD3C0200D62669 /* CameraViewController.swift */; };
 		5B96065020F3F73D00160DE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96064F20F3F73D00160DE4 /* AppDelegate.swift */; };
 		5B96065720F3F74000160DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B96065620F3F74000160DE4 /* Assets.xcassets */; };
 		5B96065A20F3F74000160DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B96065820F3F74000160DE4 /* LaunchScreen.storyboard */; };
@@ -38,6 +39,7 @@
 		5B65446720FD0F6D00D62669 /* CustomCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewController.swift; sourceTree = "<group>"; };
 		5B65446920FD115F00D62669 /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
 		5B65446B20FD12E400D62669 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5B65446E20FD3C0200D62669 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		5B96064C20F3F73D00160DE4 /* AppSpringboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSpringboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B96064F20F3F73D00160DE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B96065620F3F74000160DE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = DataStore;
 			sourceTree = "<group>";
 		};
+		5B65446D20FD3BB600D62669 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				5B65446E20FD3C0200D62669 /* CameraViewController.swift */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
 		5B96064320F3F73D00160DE4 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		5B96066120F3F77B00160DE4 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				5B65446D20FD3BB600D62669 /* Device */,
 				5B25455520FA4C2E00E5B42B /* DataStore */,
 				5B25455220FA4A6600E5B42B /* UITableViewController */,
 				5B96066220F3F7AF00160DE4 /* ApplicationController.swift */,
@@ -199,6 +210,7 @@
 				5B65446C20FD12E400D62669 /* Color.swift in Sources */,
 				5B25456320FAF9AD00E5B42B /* RefreshableTableViewController.swift in Sources */,
 				5B25455420FA4A7D00E5B42B /* PlainTableViewController.swift in Sources */,
+				5B65446F20FD3C0200D62669 /* CameraViewController.swift in Sources */,
 				5B25456120FAF80E00E5B42B /* GroupedWithSectionsViewController.swift in Sources */,
 				5B25455F20FAF58900E5B42B /* PlainWithSectionsViewController.swift in Sources */,
 				5B65446820FD0F6D00D62669 /* CustomCellTableViewController.swift in Sources */,
