@@ -107,13 +107,16 @@ private enum TableViewControllerRow: Int, SectionRowProtocol {
 
 private enum DeviceRow: Int, SectionRowProtocol {
     case camera
+    case photoRoll
 
-    static var count: Int = 1
+    static var count: Int = 2
 
     var title: String {
         switch self {
         case .camera:
             return "Camera"
+        case .photoRoll:
+            return "Photo Roll"
         }
     }
 
@@ -121,6 +124,8 @@ private enum DeviceRow: Int, SectionRowProtocol {
         switch self {
         case .camera:
             return CameraViewController()
+        case .photoRoll:
+            return PhotoRollViewController()
         }
     }
 

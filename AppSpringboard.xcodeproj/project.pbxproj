@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B099581210646AD00EF9221 /* PhotoRollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B099580210646AD00EF9221 /* PhotoRollViewController.swift */; };
 		5B25455120F95EFB00E5B42B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25455020F95EFB00E5B42B /* MainMenuViewController.swift */; };
 		5B25455420FA4A7D00E5B42B /* PlainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25455320FA4A7D00E5B42B /* PlainTableViewController.swift */; };
 		5B25455720FA4C4900E5B42B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B25455620FA4C4900E5B42B /* DataStore.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B099580210646AD00EF9221 /* PhotoRollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRollViewController.swift; sourceTree = "<group>"; };
 		5B25455020F95EFB00E5B42B /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		5B25455320FA4A7D00E5B42B /* PlainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainTableViewController.swift; sourceTree = "<group>"; };
 		5B25455620FA4C4900E5B42B /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5B65446E20FD3C0200D62669 /* CameraViewController.swift */,
+				5B099580210646AD00EF9221 /* PhotoRollViewController.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				5B65446F20FD3C0200D62669 /* CameraViewController.swift in Sources */,
 				5B25456120FAF80E00E5B42B /* GroupedWithSectionsViewController.swift in Sources */,
 				5B25455F20FAF58900E5B42B /* PlainWithSectionsViewController.swift in Sources */,
+				5B099581210646AD00EF9221 /* PhotoRollViewController.swift in Sources */,
 				5B65446820FD0F6D00D62669 /* CustomCellTableViewController.swift in Sources */,
 				5B96066320F3F7AF00160DE4 /* ApplicationController.swift in Sources */,
 				5B25455120F95EFB00E5B42B /* MainMenuViewController.swift in Sources */,

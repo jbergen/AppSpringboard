@@ -1,8 +1,8 @@
 //
-//  CameraViewController.swift
+//  PhotoRollViewController.swift
 //  AppSpringboard
 //
-//  Created by Joseph Bergen on 7/16/18.
+//  Created by Joseph Bergen on 7/23/18.
 //  Copyright © 2018 Joseph Bergen. All rights reserved.
 //
 
@@ -10,11 +10,11 @@ import UIKit
 
 /**
 
- Camera Demo
+ Photo Roll Demo
 
- This demo shows a very simple implementation of the camera feature. Tapping the camera icon in the
- upper right hand corner launches the camera as a modal. Once a photo is taken and the camera is
- dismissed, then the image is returned and displayed in the view controller
+ This demo shows a very simple implementation of the photo roll feature. Tapping the plus icon in the
+ upper right hand corner launches the photo picker as a modal. Once an image is chosen, the modal is
+ dismissed, then the image is returned and displayed in the view controller.
 
  DOCS
  ====
@@ -24,25 +24,25 @@ import UIKit
 
  **/
 
-// We need to conform to `UIImagePickerControllerDelegate` & `UINavigationControllerDelegate` to respond to the camera events
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+// We need to conform to `UIImagePickerControllerDelegate` & `UINavigationControllerDelegate` to respond to the picker events
+class PhotoRollViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     // this is the view that the resulting image will be shown in
     private let photoView = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Camera"
+        title = "Photo Roll"
         view.backgroundColor = .white
 
         // set the right navigation bar button to be a camera button that will call `showCamera` when tapped
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(showCamera))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pickPhoto))
 
         // set a background pattern so it's easier to see where the image will appear
         if let transparencyImage = UIImage(named: "transparency") {
             photoView.backgroundColor = UIColor(patternImage: transparencyImage)
         }
-        
+
         // set up and add the image view for the photo
         photoView.contentMode = .scaleAspectFit
         photoView.frame = CGRect(x: 0, y: 0, width: view.bounds.width - 40, height: view.bounds.width - 40)
@@ -51,25 +51,25 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
 
     /**
-     When the camera button is tapped, this function is called which takes care of prompting the user for permissions
-     and presenting the camera controller
-    **/
-    @objc func showCamera() {
+     When the add button is tapped, this function is called which takes care of prompting the user for permissions
+     and presenting the photo picker
+     **/
+    @objc func pickPhoto() {
         // check for permissions and hardware availability
-        guard UIImagePickerController.isSourceTypeAvailable(.camera) else { return }
-        let cameraController = UIImagePickerController()
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
+        let pickerController = UIImagePickerController()
         // set the delegate to self to handle the results
-        cameraController.delegate = self
-        cameraController.sourceType = .camera
+        pickerController.delegate = self
+        pickerController.sourceType = .photoLibrary
         // present the picker modally
-        present(cameraController, animated: true, completion: nil)
+        present(pickerController, animated: true, completion: nil)
     }
 
     // MARK: UIImagePickerControllerDelegate
 
     /**
-     Called when a photo is taken and approved
-    **/
+     Called when a photo chosen approved
+     **/
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // Dismiss the picker modal
         picker.dismiss(animated: true, completion: nil)
